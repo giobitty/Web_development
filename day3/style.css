@@ -1,0 +1,53 @@
+.sectioncard {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 30px auto;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px gray; /* Fixed typo here (1px qpx 5px) */
+    transition: transform 200ms ease-in-out;
+}
+
+.cardlink {
+    color: brown;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Adjusted to scale up slightly instead of down */
+    cursor: pointer;
+}
+
+.card:hover .cardlink {
+    display: inline;
+}
+
+.cardinfo {
+    margin-top: 20px;
+}
+
+.portraitcard {
+    position: relative;
+}
+.portraitinfo{
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+}
+/* Optional: Improve image styling within the card */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
