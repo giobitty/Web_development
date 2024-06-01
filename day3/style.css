@@ -53,6 +53,7 @@
     height: auto;
     border-radius: 10px;
 }
+/* the second image was overflowing out of the frame so i deleted the height from the cards and gave an auto max-height to the secondImg */
 .secondImg{
     width: auto;
     max-height: 100%;
