@@ -9,17 +9,19 @@
     margin: 30px auto;
     padding: 20px;
     width: 400px;
-    height: 500px;
     background-color: rgb(244, 244, 244);
     border-radius: 20px;
-    box-shadow: 1px 1px 5px gray; /* Fixed typo here (1px qpx 5px) */
+    box-shadow: 1px 1px 5px gray;
     transition: transform 200ms ease-in-out;
+    overflow: hidden;
 }
 
 .cardlink {
+    display: none;
     color: brown;
     font-weight: 200;
     text-decoration: none;
+    transition: opacity 0.8s ease-in-out;
 }
 
 .card:hover {
@@ -50,4 +52,8 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
+}
+.secondImg{
+    width: auto;
+    max-height: 100%;
 }
