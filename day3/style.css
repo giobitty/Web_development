@@ -4,7 +4,32 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-
+.cardGreets{
+    /* making the position absolute to have the writing appear in a specific place */
+    position: absolute;
+    top: 33%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the text is above the image */
+    display: none;
+    color: brown;
+    font-weight: 200;
+    text-decoration: none;
+    transition: opacity 0.8s ease-in-out;
+    font-size: 24px; /* Example font size */
+    color: #333; /* Example text color */
+    /* Other styling properties as needed */
+}
+.postcard:hover .cardGreets{
+    display: inline;
+}
+.firstImg{
+    width: 100%;
+    height: auto; 
+    /* Ensure the image stays beneath the text */
+    position: relative;
+    z-index: 0;
+}
 .card {
     margin: 30px auto;
     padding: 20px;
