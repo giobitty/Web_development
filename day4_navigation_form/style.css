@@ -1,0 +1,74 @@
+.header{
+    
+    /* border: solid 1px red;  */
+    /* we will prepare the layout positioning */
+    display: flex;
+    padding: 30px;
+}
+.headerlink{
+    width: 20%;
+    /* border: solid 1px green; */
+    display: block;
+    /* to make unicode bigger we need to change the font size */
+    font-size: 50px;
+    text-align: center;
+    /* to remove the underline from the unicode */
+    text-decoration: none;
+    transition: ease-in-out 300ms;
+}
+.headerlink:hover{
+    opacity: 0.6;
+    transform: scale(1.1) translateX(-20px);
+    /* translateX -> slides to the left */
+}
+.headertitle{
+    width: 79%;
+    /* border: solid 1px orange; */
+    transition: ease-in-out 300ms;
+    color: brown;
+    text-align: center;
+}
+.headertitle:hover{
+    transform: scale(1.1) translateX(-20px);
+    font-size: 35px;
+}
+/* #### SITE LINKS #### */
+.sitelinks{
+    background-color: rgb(192, 25, 25);
+    display: flex;
+    justify-content: center;
+}
+.navlink{
+    display: inline-block;
+    padding: 1em 3em;
+    /* border: solid 1px black; */
+    color: whitesmoke;
+}
+.navlink:hover{
+    background-color: whitesmoke;
+    /* border-radius: 12px; */
+    color: rgb(192, 25, 25)
+}
+/* #### Main body #### */
+.mainbody{
+    border: solid 1px green;
+    display: flex;
+}
+.main_div{
+    border: solid 1px orange;
+    /* the div will take 70% of the main space */
+    width: 70%;
+
+}
+.pagelinks{
+    border: solid 1px blue;
+    width: 30%;
+}
+.main_div section{
+    background-color: rgb(243, 203, 129);
+    padding: 1em 2em;
+}
+.main_div article{
+    background-color: greenyellow;
+    padding: 1em 2em;
+}
