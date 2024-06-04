@@ -51,23 +51,98 @@
 }
 /* #### Main body #### */
 .mainbody{
-    border: solid 1px green;
+    /* border: solid 1px green; */
     display: flex;
+    flex-wrap: wrap;
 }
 .main_div{
-    border: solid 1px orange;
+    /* border: solid 1px orange; */
     /* the div will take 70% of the main space */
-    width: 70%;
+    width: 67%;
 }
 .pagelinks{
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
     width: 30%;
 }
 .main_div section{
-    background-color: rgb(243, 203, 129);
+    /* background-color: rgb(243, 203, 129); */
     padding: 1em 2em;
 }
 .main_div article{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     padding: 1em 2em;
+}
+/* #### PAGELINKS #### */
+.pagelinks{
+    padding: 1em;
+}
+.link_nav{
+    border-bottom: 1px solid black;
+    display: block;
+    /* 1em is 12px */
+    padding: 1em; 
+    text-align: center;
+    text-decoration: none;
+}
+.link_nav:hover{
+    color: whitesmoke;
+    background-color:  rgb(213, 87, 87);
+    font-weight: 900;
+}
+aside h2{
+    text-align: center;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.figureimg{
+    width: 80%;
+    /* let's center the element */
+    margin: auto;
+    /* the element that has this "position relative" will become the parent , with this declaration this becomes the parent of the element that contains the "absolute position*/
+    position: relative;
+    box-shadow: 1px 1px 3px gray;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.imgtitle{
+    /* this is the "child" of the parent according to the position */
+    position: absolute;
+    /* 0 is all the way to the top */
+    top: 40%;
+    left: 40%;
+    text-align: center;
+    color: whitesmoke;
+}
+.imgtitle:hover{
+    color: red;
+    font-size: 30px;
+}
+/* #### FOOTER #### */
+.contact{
+    background-color: darkgreen;
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 20px;
+}
+.contactcolumn{
+    width: 33%;
+    color: whitesmoke;
+    padding: 2em 3em;
+}
+.contactcolumn a{
+    color: whitesmoke;
+
+}
+.policylinks{
+    display: flex; 
+    text-decoration: none;
+    padding-top: 1px;
+    font-size: small;
+}
+.socialink{
+    width: 30px;
+    display: inline;
+    padding: 0.5em;
 }
