@@ -38,3 +38,8 @@
 .control label{
     padding: 20px;
 }
+.form fieldset{
+    
+    margin: 4% auto;
+    box-shadow: 2px 2px 5px gray;
+}

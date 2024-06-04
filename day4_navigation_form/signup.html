@@ -12,15 +12,62 @@
     <a class="linkhome" href="lab4.html"><p class="homeicon"><span>&#8962;</span> Home</p></a>
     <form class="form" action="">
         <!-- Form Components -->
-        <legend class="formlegend">Sign Up</legend>
+     <fieldset>
+         <legend class="formlegend">Sign Up</legend>
         <!-- input control . Labels connect to the input through the id-->
-     <div class="control"> 
-        <label for="username">Username</label>
-        <input placeholder="Type username" user="username" id="username" type="text">
+        <div class="control"> 
+             <label for="username">Username</label>
+            <input placeholder="Type username" user="username" id="username" type="text">
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Insert your password">
-     </div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Insert your password">
+        </div>
+        <div class="control">
+            <label for="color">Select a color</label>
+            <input type="color" name="color" id="color" value="#a133e8">
+        </div>
+        <div class="control">
+            <label for="rating">How do you like my work (1 for unsatisfied ant 10 for excellent)</label>
+            <input type="range" name="ratingwork" id="rating" min="1" max="10">
+        </div>
+     </fieldset>
+     <fieldset>
+        <div class="control">
+            <label for="appointment">Appointment date: </label>
+            <input type="date" name="" id="appointment">
+        </div>
+        <div class="control">
+            <p>Gender : </p>
+            <label for="female">Female</label>
+            <input type="radio" name="selectgender" id="female" value="female">
+
+            <label for="male">Male</label>
+            <input type="radio" name="selectgender" id="male" value="male">        
+            <label for="nonbinary">Non-binary</label>
+            <input type="radio" name="selectgender" id="nonbinary" value="nonbinary">
+        </div>
+        <div class="control">
+            <p>How did you hear about us? </p>
+            <label for="socialmedia">Social Media</label>
+            <input type="checkbox" name="aboutus" id="socialmedia">
+            <label for="internet">Internet</label>
+            <input type="checkbox" name="aboutus" id="internet">
+            <label for="newspapaer">News Paper</label>
+            <input type="checkbox" name="aboutus" id="newspaper">
+        </div>
+
+        <hr>
+        <div class="control">
+           
+            <textarea name="textcontent" id="comments" rows="15" cols="40" placeholder="No more then 200 words" maxlength="200"></textarea>
+            <label for="comments">Feedback and comments</label>
+
+        </div>
+     </fieldset>
+     <div class="control">
+        <button type="submit">Submit</button>
+    </div>
     </form>
+    <hr>
 </body>
 </html>
