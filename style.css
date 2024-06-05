@@ -6,10 +6,12 @@ body{
     background-repeat: no-repeat;
 }
 h1{
-    text-align: center;
+    text-align:end;
 }
+
 .emailme{
-    
+    color: rgb(254, 249, 243);
+
 }
 .list{
     list-style: none;
