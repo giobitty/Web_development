@@ -8,10 +8,15 @@ body{
 h1{
     text-align:end;
 }
-
+.emailme:hover{
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+}
 .emailme{
     color: rgb(254, 249, 243);
-
+    transition: 300ms;
+    text-decoration: none;
 }
 .list{
     list-style: none;

@@ -1,0 +1,15 @@
+body{
+    margin: auto;
+    padding-top: 4em;
+}
+ul li:hover{
+    background-color: blue;
+    color: white;
+}
+nav a{
+    transition: 300ms;
+}
+nav a:hover{
+    background-color: rgb(192, 192, 254);
+    color: white;
+}
