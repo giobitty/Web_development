@@ -1,0 +1,39 @@
+body{
+    padding-top: 70px;
+}
+.firstSection{
+    border: 1px solid red;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f8f9fa;
+}
+.navbar{
+    height: 30%;
+    background-image: url(../img/trulli/pexels-au-ri-22469733-6614716.jpg);
+    background-size: cover;
+    /* background-position: center; */
+}
+.spanTitle{
+    color: red;
+    font-size: 50px;
+}
+.sectionArticle{
+    border: solid 1px orange;
+}
+.testimonials{
+    border: 1px green solid;
+    margin: 20px;
+    padding: 30px;
+}
+.card{
+    margin: 20px;
+    transition: 300ms;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card h3:hover{
+    color: red;
+    /* remember, to have the size changing effect use "transform" */
+    transform: scale(1.2);
+}
