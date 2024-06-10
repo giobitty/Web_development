@@ -14,7 +14,6 @@ body{
 header{
     padding: 30px;
     width: 100%;
-    height: 100vh;
     background-image:  url(../img/ABEC9B82-DE3B-4E76-862D-C0E80FF66CCF.JPG);
     background-position: center; 
     background-repeat: no-repeat;
@@ -102,6 +101,9 @@ footer{
     opacity: 1;
     background-color: whitesmoke;
 }
+.containerWhattodo{
+    padding: 70px;
+}
 .containerWhattodo h1{
     text-align: center;
     margin-bottom: 1em;
@@ -113,4 +115,12 @@ footer{
 }
 .containerWhattodo h1:hover{
     transform: scale(1.2);
+}
+.wheretostayimg{
+    width: 160px;
+    margin: auto;
+}
+.bedbreak{
+    display: flex;
+    flex-direction: column;
 }
