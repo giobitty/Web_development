@@ -102,3 +102,15 @@ footer{
     opacity: 1;
     background-color: whitesmoke;
 }
+.containerWhattodo h1{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.containerWhattodo a{
+    text-decoration: none;
+    color: black;
+    transition: 300ms;
+}
+.containerWhattodo h1:hover{
+    transform: scale(1.2);
+}
