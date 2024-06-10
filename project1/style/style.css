@@ -18,13 +18,21 @@ header{
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 20px; /* Added margin-bottom */
+
+}
+@media screen and (min-width: 500px){
+    header{
+        background-color: white;
+        color: black;
+    }
 }
 header h1{
-    font-size: 80px;
     padding: 35px;
     margin: auto;
     text-align: center;
 }
+
 .h1Header{
     text-decoration: none;
     color: whitesmoke;
@@ -36,6 +44,11 @@ header h1{
 .spanTitle{
     color: red;
     font-size: 50px;
+    text-decoration-thickness: 200ms;
+}
+.spanTitle:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
 .sectionArticle{
     /* border: solid 1px orange; */
@@ -119,6 +132,7 @@ footer{
 .wheretostayimg{
     width: 160px;
     margin: auto;
+    border-radius: 12px;
 }
 .bedbreak{
     display: flex;
