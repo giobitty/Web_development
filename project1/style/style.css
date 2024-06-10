@@ -2,29 +2,57 @@ body{
     padding-top: 70px;
 }
 .firstSection{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 20px;
     margin: 20px;
     background-color: #f8f9fa;
 }
-.navbar{
-    height: 30%;
-    background-image: url(../img/trulli/pexels-au-ri-22469733-6614716.jpg);
+.row h1{
+    text-align: center;
+}
+
+header{
+    padding: 30px;
+    width: 100%;
+    height: 100vh;
+    background-image:  url(../img/ABEC9B82-DE3B-4E76-862D-C0E80FF66CCF.JPG);
+    background-position: center; 
+    background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: center; */
+}
+header h1{
+    font-size: 80px;
+    padding: 35px;
+    margin: auto;
+    text-align: center;
+}
+.h1Header{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.h1Header:hover{
+    color: black;
+    text-decoration: underline;
 }
 .spanTitle{
     color: red;
     font-size: 50px;
 }
 .sectionArticle{
-    border: solid 1px orange;
+    /* border: solid 1px orange; */
+}
+p{
+    text-align: center;
+}
+article{
+    text-align: center;
 }
 .testimonials{
-    border: 1px green solid;
+    /* border: 1px green solid; */
     margin: 20px;
     padding: 30px;
 }
+
 .card{
     margin: 20px;
     transition: 300ms;
@@ -36,4 +64,41 @@ body{
     color: red;
     /* remember, to have the size changing effect use "transform" */
     transform: scale(1.2);
+}
+
+.contact{
+    background-color: rgb(27, 32, 27);
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 20px;
+}
+.contactcolumn{
+    width: 33%;
+    color: whitesmoke;
+    padding: 2em 3em;
+}
+.contactcolumn a{
+    color: whitesmoke;
+
+}
+.policylinks{
+    display: flex; 
+    text-decoration: none;
+    padding-top: 1px;
+    font-size: small;
+}
+.socialink{
+    width: 50px;
+    display: inline;
+    padding: 0.5em;
+    opacity: 0.6;
+}
+footer{
+    margin-top: 15px;
+    width: 100%;
+    color: whitesmoke;
+}
+.socialink:hover{
+    opacity: 1;
+    background-color: whitesmoke;
 }
