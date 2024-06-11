@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Introduction to JS - Giorgia Beavers</title>
+</head>
+<body>
+    <h1>
+        Introduction to JavaScript
+    </h1>
+    <script>
+        // console.log("Welcome to JS introduction Giorgia!!")
+        // let number = 10;
+        // console.log("the giving is ", number)
+        // number++
+        // console.log("The updated number is ", number)
+
+        let name = "peter";
+        console.log(name+name)
+
+        // collecting info from the user using prompt(buld in js function that will open a popup where they will be able to input their info)
+        
+        let firstname = prompt("Enter your first name ", "")
+        // console.log("Hello " + firstname)
+        console.log(`Hello ${firstname}`)
+
+        // let n = prompt("Enter a number : ", "")
+        // console.log(typeof(n)) 
+        // typeof is a JS method that returns the data type
+        let n = prompt("Enter first number: ", "")
+        let n1 = prompt("Enter second number: ", "")
+        console.log(typeof(n1))
+        
+        let sum = n1+n
+        console.log(`The sum is ${sum}`)
+        // BUT like this we are "adding" a string to a string so js will not make the actual sum between numbers but will process it as strings we need to specify the value we want to parse it to
+        n = parseInt(n)
+        n1 = parseInt(n1)
+        sum = n+n1
+        console.log(`The sum is ${sum}`)
+
+    </script>
+</body>
+</html>
