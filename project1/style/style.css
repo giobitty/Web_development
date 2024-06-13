@@ -143,15 +143,20 @@ footer{
     color: black;
     transition: 300ms;
 }
-.containerWhattodo h1:hover{
+.containerWhattodo img:hover{
     transform: scale(1.2);
 }
 .wheretostayimg{
-    width: 160px;
+    padding: 10px;
+    width: 320px;
     margin: auto;
     border-radius: 12px;
+    border-radius: 20%;
 }
 .bedbreak{
     display: flex;
     flex-direction: column;
+}
+.hotel p{
+    text-align: center;
 }
