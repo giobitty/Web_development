@@ -1,6 +1,6 @@
 console.log("Giorgia Beavers")
 // select the  <div id="special">
-let division = document.querySelector("#special")
+let division = document.querySelector(".special")
 console.log(division)
 
 //// Changing the style of  <div id="special">
@@ -29,5 +29,5 @@ s4.innerHTML = "OFF by <b><em>midnight</em></b>"
 
 //className method
 
-let spans = document.querySelectorAll("#special span")
+let spans = document.querySelectorAll(".special span")
 spans[0].className = "changefontfamily"
