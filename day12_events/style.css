@@ -1,0 +1,40 @@
+.linkqcc{
+    margin: 20px 0px;
+    display: block;
+    padding: 15px 50px;
+    width: 30px;
+    background: rgb(99, 9, 9);
+    color: wheat;
+    border-radius: 10px;
+}
+.colorcontainer{
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    /* border: solid 2px black; */
+    padding: 30px;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+}   
+.btncolor{
+    border: none;
+    margin: auto;
+    padding: 10px;
+
+}
+.btnolive{
+    border: none;
+    margin: auto;
+    padding: 10px;
+}
+.btnreset{
+    border: none;
+    margin: auto;
+    padding: 10px;
+}
+.btnorange{
+    border: none;
+    margin: auto;
+    padding: 10px;
+}
