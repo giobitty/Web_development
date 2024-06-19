@@ -42,3 +42,57 @@ let btnreset = document.querySelector(".btnreset")
 btnreset.addEventListener("click", function(){
     colorcontainer.style.backgroundColor = "rgb(255,255,255"
 })
+
+// remove an item from list
+let listfruits = document.querySelector("#listfruits")
+listfruits.addEventListener("click",function(event){
+    if(event.target.tagName.toLowerCase()==="li"){
+        event.target.remove()
+    }
+})
+
+// prevent default event
+let visitqcc = document.querySelector(".visitqcc")
+visitqcc.addEventListener("click", function(event){
+    event.preventDefault()
+    alert("QCC website is off! Try later")
+})
+// scroll events
+let content = document.querySelector(".content")
+let btnscrollingright = document.querySelector(".btnscrollingright")
+btnscrollingright.addEventListener("click", function(){
+    window.scrollBy(100,0)
+})
+
+// photo gallery
+let btnleft = document.querySelector(".btnleft")
+let btnright = document.querySelector(".btnright")
+let gallerycontainer = document.querySelector(".gallery-container")
+
+btnleft.addEventListener("click",function(){
+    gallerycontainer.scrollBy({
+        top:0,
+        left: -500,
+        behavior:"smooth"
+    })
+})
+btnright.addEventListener("click",function(){
+    gallerycontainer.scrollBy({
+        top:0,
+        left: 500,
+        behavior:"smooth"
+    })
+})
+/**to top */
+
+let gotop = document.querySelector(".gotop")
+window.addEventListener("scroll",function(){
+    let pxtop = window.scrollY;
+    console.log(pxtop)
+    if(pxtop >= 500){
+        gotop.style.display = "block"
+    }
+    else{
+        gotop.style.display = "none"
+    }
+})

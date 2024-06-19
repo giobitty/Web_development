@@ -38,3 +38,87 @@
     margin: auto;
     padding: 10px;
 }
+#listfruits li{
+    padding: 12px;
+    width: 200px;
+    border: lightblue 1px solid;
+    list-style: none;
+}
+#listfruits li:hover{
+    background-color: red;
+
+}
+/* scroll event */
+.content{
+    width: 2000px;
+    background-color: aqua;
+    padding: 20px;
+}
+/* photo gallery */
+.maincontainer, .gallery-container{
+    width: 1000px;
+    margin: auto;
+}
+.maincontainer{
+    position: relative;
+    z-index: 0;
+}
+/* index 0 will sit in the back index 1 in front of the 0 and so on 2 in front of 1...  */
+.gallery-container{
+    position: absolute;
+    z-index: 1;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.gallery-img{
+    display: inline-block;
+    width: 500px;
+}
+.btnright, .btnleft{
+    position: absolute;
+    z-index: 2;
+    top: 170px;   
+    background-color: rgba(0,0,0,0);
+    color: magenta; 
+    font-size: 30px;
+    opacity: 0.5;
+
+}
+.btnright{
+    right: 20px;
+}
+.btnleft{
+left: 20px;
+}
+.btnright:hover , .btnleft:hover{
+    opacity: 1;
+}
+/* to top */
+html{
+    scroll-behavior: smooth;
+}
+.gotop{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 3;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: white;
+    transition: ease-in-out 0.5s;
+    display: none;
+}
+.gotop a{
+    text-decoration: none;
+    color: black; 
+}
+.gotop:hover{
+    box-shadow: 0px 0px 5px 2px;
+    background-color: rgba(200,200,200,0.5);
+}
