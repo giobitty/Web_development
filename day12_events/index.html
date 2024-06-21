@@ -57,6 +57,37 @@
     <a href="#"><span>&#11161;</span></a>
    </div>
 
+   <!-- Thursday 20 -->
+ <div class="divForm">
+        <h2>Form events</h2>
+        <form action="" id="myform">
+
+            <div class="controlblock">
+                    <lable for="username">Enter your username</lable>
+                    <input type="text" id="username" placeholder="Type username">
+            </div>
+
+        <!-- password -->
+         <div class="controlblock">
+                <label for="password">Enter your password</label>
+                <input type="password" placeholder="Enter password" id="passwordfield" required>
+                <p class="passwordmsg">Must be 8+ characters</p>
+                <div class="passworderror"></div>
+         </div>
+
+         <div class="controlblock">
+            <label for="comments">Feedback and comments</label>
+            <textarea name="textcontent" id="comments" rows="15" cols="40" placeholder="No more then 2000 words" maxlength="2000"></textarea>
+            <div class="commentserror"></div>
+         </div>
+
+            <button type="submit" class="submitbutton">SUBMIT</button>
+   
+        </form>
+        <div class="freetings">
+            <p>Welcome to form events <span></span></p>
+        </div>
+ </div>
    <script src="myjs.js">
 
     </script>

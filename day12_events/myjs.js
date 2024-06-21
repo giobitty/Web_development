@@ -96,3 +96,55 @@ window.addEventListener("scroll",function(){
         gotop.style.display = "none"
     }
 })
+// FORM
+const myform = document.querySelector("#myform")
+const greeting = document.querySelector(".greeting")
+const greetingname = document.querySelector(".greeting p span")
+
+myform.addEventListener("submit", function(event){
+    event.preventDefault()
+    const usernameinput = document.querySelector("#username")
+    const username = usernameinput.value
+    if(username === ""){
+        alert("Please enter username")
+        return;
+    }
+    greetingname.innerHTML = username
+    greeting.style.display = "block"
+    usernameinput.value = " "
+})
+
+// password
+const passwordfield = document.querySelector("#passwordfield")
+const submitbtn = document.querySelector(".submitbutton")
+
+const passworderror = document.querySelector(".passworderror")
+window.addEventListener("load", function(){
+    submitbtn.disabled = true
+    submitbtn.style.backgroundColor = "lightgray"
+})
+
+// check length of password
+passwordfield.addEventListener("input", function(){
+    let numbercharachter = passwordfield.value.length
+    if(numbercharachter<8){
+        passworderror.textContent = "Password needs to be at least 8 characters"
+        passworderror.style.color = "red"
+
+    }else{
+        passworderror.textContent = "Good!"
+        passworderror.style.color = "green"
+        submitbtn.disabled = false
+    }
+})
+
+const commentserror = document.querySelector(".commentserror")
+const textfield = document.querySelector("#comments")
+textfield.addEventListener("input", function(){
+let numbermsgchar = textfield.value.length
+if (numbermsgchar < 2000){
+    commentserror.textContent = "Your comment is too long"
+}else{
+    commentserror.textContent = "Thank you for your comment"
+}
+})
