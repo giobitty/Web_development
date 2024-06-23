@@ -24,3 +24,21 @@ myform.addEventListener("submit", function(e){
     sessionStorage.setItem('product123', "Product name")
 })
 
+// SHOPPING CART
+// collect the item
+const itemname = document.querySelector(".itemname")
+const itemdescription = document.querySelector(".itemdescription")
+const imgitam1 = document.querySelector("imgitem1")
+const saleprice = document.querySelector(".saleprice")
+const formitem1 = document.querySelector(".formitem1")
+
+formitem1.addEventListener("submit", function(){
+    const quantityitem1 = document.querySelector(".itmqt").value
+
+    // store the elements in sessionStorage
+    sessionStorage.setItem('product_quantity',x)
+    sessionStorage.setItem('product_name', itemname.textContent)
+    sessionStorage.setItem('product_description', itemdescription.textContent)
+    sessionStorage.setItem('product_img', imgitam1)
+
+})

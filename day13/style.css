@@ -11,3 +11,55 @@
     padding: 10px;
     margin-bottom: 20px;
 }
+/* items to cart */
+.container{
+    margin-top: 40px;
+}
+img{
+    margin: auto;
+    width: auto;
+    /* border: solid 1px red; */
+    margin-left: 10%;
+}
+.item1{
+    width: 300px;
+    margin: auto;
+    box-shadow: 1px 1px 3px gray;
+    /* border: solid 2px black; */
+}
+.itemname{
+    text-align: center;
+    font-size: 1.3em;
+}
+.itemdescription{
+    text-align: center;
+}
+
+.saleprice{
+    margin-bottom: 8px;
+    color: red;
+    font-size: 1.3em;
+    padding: 8px;
+}
+.itemdescription a{
+    text-decoration: none;
+    color: rgb(87, 26, 26);
+}
+.formitem1{
+    padding: 20px;
+}
+.itmqt{
+    width: 20%;
+    border: 0.5px solid gray;
+}
+.sbtitem1{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    background-color: lightpink;
+    color: black;
+    font-weight: bold;
+    border: none;
+    box-shadow: 1px 1px 4px gray;
+}
