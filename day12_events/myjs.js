@@ -48,13 +48,16 @@ btnreset.addEventListener("click", function(){
 // 1. get button
 let btnpressme = document.querySelector("button.btnpressme")
 btnpressme.addEventListener("click", function(e){
-    // switch text content on button 'btnpressme'
+    // switch text content on button 'btnpressme'. When we use the event or function(e) we will have to target the event
     // the textContent need to be exactly the same as the on we re targeting
     if(e.target.textContent ==="PRESS ME"){
         e.target.textContent = "BUTTON PRESSED"
     }else{
         e.target.textContent = "PRESS ME"
     }
+    // toggle between class btnpressme and btnactive
+
+    e.target.classList.toggle("btnactive")
 })
 
 // remove an item from list
@@ -65,14 +68,14 @@ listfruits.addEventListener("click",function(event){
     }
 })
 
-// prevent default event
+// prevent default event can cancel default events, in this example it prevents the opening of the <a> tag (to reach the link) and returns an alert message
 let visitqcc = document.querySelector(".visitqcc")
 visitqcc.addEventListener("click", function(event){
     event.preventDefault()
     alert("QCC website is off! Try later")
 })
 // scroll events
-let content = document.querySelector(".content")
+let content = document.querySelector("#content")
 let btnscrollingright = document.querySelector(".btnscrollingright")
 btnscrollingright.addEventListener("click", function(){
     window.scrollBy(100,0)

@@ -72,11 +72,12 @@ event object in key event */
 }
 
 /* scroll event */
-.content{
+#content{
     width: 2000px;
     background-color: aqua;
     padding: 20px;
 }
+
 /* photo gallery */
 .maincontainer, .gallery-container{
     width: 1000px;
@@ -84,6 +85,7 @@ event object in key event */
 }
 .maincontainer{
     position: relative;
+    /* first position, it will sit in the back of the other z-index that are > than 0 */
     z-index: 0;
 }
 /* index 0 will sit in the back index 1 in front of the 0 and so on 2 in front of 1...  */
@@ -103,7 +105,7 @@ event object in key event */
     z-index: 2;
     top: 170px;   
     background-color: rgba(0,0,0,0);
-    color: magenta; 
+    color: rgb(255, 255, 255); 
     font-size: 30px;
     opacity: 0.5;
 
