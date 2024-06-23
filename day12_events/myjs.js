@@ -43,6 +43,20 @@ btnreset.addEventListener("click", function(){
     colorcontainer.style.backgroundColor = "rgb(255,255,255"
 })
 
+// Tuesday , June 18
+// event object , 
+// 1. get button
+let btnpressme = document.querySelector("button.btnpressme")
+btnpressme.addEventListener("click", function(e){
+    // switch text content on button 'btnpressme'
+    // the textContent need to be exactly the same as the on we re targeting
+    if(e.target.textContent ==="PRESS ME"){
+        e.target.textContent = "BUTTON PRESSED"
+    }else{
+        e.target.textContent = "PRESS ME"
+    }
+})
+
 // remove an item from list
 let listfruits = document.querySelector("#listfruits")
 listfruits.addEventListener("click",function(event){

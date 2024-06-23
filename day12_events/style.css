@@ -38,6 +38,28 @@
     margin: auto;
     padding: 10px;
 }
+/* Tuesday June 18
+event object in key event */
+.btnpressme{
+    padding: 20px 50px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 12px;   
+}
+.btnpressme:hover{
+    cursor: pointer; 
+    background-color: red;
+    font-size: 20px;
+    border: none;
+}
+.btnactive{
+    background-color: whitesmoke;
+    font-size: 15px;
+    color: black;
+    border: none;
+}
+
+
 #listfruits li{
     padding: 12px;
     width: 200px;
@@ -48,6 +70,7 @@
     background-color: red;
 
 }
+
 /* scroll event */
 .content{
     width: 2000px;
