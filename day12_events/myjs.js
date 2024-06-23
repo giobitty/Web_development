@@ -115,20 +115,25 @@ window.addEventListener("scroll",function(){
 })
 // FORM
 const myform = document.querySelector("#myform")
-const greeting = document.querySelector(".greeting")
-const greetingname = document.querySelector(".greeting p span")
+const greeting = document.querySelector(".greetings")
+const greetingname = document.querySelector(".greetings p span")
 
 myform.addEventListener("submit", function(event){
+    // prevent default form submission
     event.preventDefault()
+    // start form validation
     const usernameinput = document.querySelector("#username")
     const username = usernameinput.value
-    if(username === ""){
-        alert("Please enter username")
-        return;
+    // first validation, check if something was actually typed in
+    if(username.trim === ""){
+        alert("Please enter a username")
+        return; //stop execution
     }
+    // if the validation passed,the data can be submitted to the server
     greetingname.innerHTML = username
     greeting.style.display = "block"
     usernameinput.value = " "
+
 })
 
 // password
@@ -138,7 +143,7 @@ const submitbtn = document.querySelector(".submitbutton")
 const passworderror = document.querySelector(".passworderror")
 window.addEventListener("load", function(){
     submitbtn.disabled = true
-    submitbtn.style.backgroundColor = "lightgray"
+    // submitbtn.style.backgroundColor = "lightgray"
 })
 
 // check length of password
@@ -152,6 +157,7 @@ passwordfield.addEventListener("input", function(){
         passworderror.textContent = "Good!"
         passworderror.style.color = "green"
         submitbtn.disabled = false
+        submitbtn.style.backgroundColor = "red"
     }
 })
 

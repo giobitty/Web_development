@@ -63,18 +63,19 @@
    </div>
 
    <!-- Thursday 20 -->
+   <!-- submit event happens when the form is submitted, validating or sending -->
  <div class="divForm">
         <h2>Form events</h2>
-        <form action="" id="myform">
+        <form id="myform">
 
             <div class="controlblock">
-                    <lable for="username">Enter your username</lable>
-                    <input type="text" id="username" placeholder="Type username">
+                    <lable for="username">Username <span>&#128100;</span></lable>
+                    <input type="text" id="username" placeholder="Type username" required>
             </div>
 
         <!-- password -->
          <div class="controlblock">
-                <label for="password">Enter your password</label>
+                <label for="password">Password</label>
                 <input type="password" placeholder="Enter password" id="passwordfield" required>
                 <p class="passwordmsg">Must be 8+ characters</p>
                 <div class="passworderror"></div>
@@ -89,7 +90,9 @@
             <button type="submit" class="submitbutton">SUBMIT</button>
    
         </form>
-        <div class="freetings">
+
+        <!-- display Welcome message if info are valid -->
+        <div class="greetings">
             <p>Welcome to form events <span></span></p>
         </div>
  </div>
