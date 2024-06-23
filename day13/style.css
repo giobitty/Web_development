@@ -1,0 +1,13 @@
+*{
+    /* to keep the width of the browser screen to 100% */
+    box-sizing: border-box;
+}
+.myform fieldset{
+    width: 400px;
+    margin: 20px auto;
+    background-color: aliceblue;
+}
+.controlblock{
+    padding: 10px;
+    margin-bottom: 20px;
+}

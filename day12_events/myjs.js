@@ -146,6 +146,7 @@ window.addEventListener("load", function(){
     // submitbtn.style.backgroundColor = "lightgray"
 })
 
+// password validation
 // check length of password
 passwordfield.addEventListener("input", function(){
     let numbercharachter = passwordfield.value.length
@@ -165,8 +166,8 @@ const commentserror = document.querySelector(".commentserror")
 const textfield = document.querySelector("#comments")
 textfield.addEventListener("input", function(){
 let numbermsgchar = textfield.value.length
-if (numbermsgchar < 2000){
-    commentserror.textContent = "Your comment is too long"
+if (numbermsgchar < 2000 || numbermsgchar > 20){
+    commentserror.textContent = "Your comment is too short or too long"
 }else{
     commentserror.textContent = "Thank you for your comment"
 }

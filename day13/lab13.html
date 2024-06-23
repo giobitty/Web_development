@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Giorgia Beavers - Temporary storage</title>
+</head>
+<body>
+    <h1>Temporary storage</h1>
+    <!-- LocalStorage and SessionStorage
+    Not all browser read 'localStorage'
+    In JS the sessionStorage is a web storage API, 
+    - available only for the duration of the session;
+    -to store data we use 'setItem()' method;
+        sessionStorage.setItem('key', 'value');
+    - retrieve data from session using 'getItem()' method;
+        let value = sessionStorage.getItem('key')
+        console log(value)
+    -remove item with removeItem()
+    -->
+    <form class="myform" action="pages/display.html">
+        <fieldset>
+            <legend>Survey</legend>
+            <div class="controlblock">
+                <label for="firstName">First name :</label>
+                <input type="text" name="username" id="firstName" placeholder="username">
+            </div>
+            <div class="controlblock">
+                <p>Please select your favorite Web Language : </p>
+                <label for="HTML">HTML</label>
+                <input type="radio" name="fav_language" id="html" value="HyperText Markup Language, HTML">
+
+                <label for="css">CSS</label>
+                <input type="radio" name="fav_language" id="css" value="Cascade Style Sheet, CSS">
+
+                <label for="javascript">JavaScript</label>
+                <input type="radio" name="fav_language" id="javascript" value="JavaScript, JS">
+
+            </div>
+
+            <div class="controlblock">
+                <input type="submit" value="Submit Survey">
+            </div>
+        </fieldset>
+    </form>
+    <div class="displayResult"></div>
+    <script src="storage.js"></script>
+</body>
+</html>

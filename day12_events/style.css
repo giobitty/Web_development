@@ -173,6 +173,9 @@ html{
     color: gray;
     margin-top: -1;
 }
+.passqoederror{
+    color: red;
+}
 .submitbutton{
     
     border-radius: 12px;
