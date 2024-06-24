@@ -2,6 +2,9 @@
     /* to keep the width of the browser screen to 100% */
     box-sizing: border-box;
 }
+h1{
+    text-align: center;
+}
 .myform fieldset{
     width: 400px;
     margin: 20px auto;
@@ -62,4 +65,26 @@ img{
     font-weight: bold;
     border: none;
     box-shadow: 1px 1px 4px gray;
+}
+/* SHOPPING CART */
+.bagcontainer{
+    width: 90%;
+    margin: auto;
+    border: solid 2px black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+h2{
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+h2:hover{
+    border-bottom: none;
+}
+.itmimg h2{
+    padding-left: 20px;
+}
+.totalprice h2{
+    padding-right: 20px;
 }
