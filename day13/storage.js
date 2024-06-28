@@ -27,9 +27,9 @@ myform.addEventListener("submit", function(e){
 // SHOPPING CART
 // collect the item
 const itemname = document.querySelector(".itemname")
-const itemdescription = document.querySelector(".itemdescription")
-const imgitam1 = document.querySelector("imgitem1")
-const saleprice = document.querySelector(".saleprice")
+const itemdescription = document.querySelector(".itemdescription").textContent
+const imgitam1 = document.querySelector("imgitem1").getAttribute('src')
+const saleprice = document.querySelector(".saleprice").textContent
 const formitem1 = document.querySelector(".formitem1")
 
 formitem1.addEventListener("submit", function(){
@@ -42,3 +42,5 @@ formitem1.addEventListener("submit", function(){
     sessionStorage.setItem('product_img', imgitam1)
 
 })
+
+const priceitem_display = document.querySelector(".")
