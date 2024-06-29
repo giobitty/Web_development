@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorgia Beavers - Quotes and Forms</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <form class="quotesform" action="/process" method="POST">
+            <div class="controlform">
+                <label for="inputauthor">Quote Author: </label>
+                <input type="text" id="inputauthor" name="author" placeholder="Add a quote author..">
+            </div>
+            <div class="controlform">
+                <label for="quote">Quote: </label>
+                <textarea name="quote" id="quote" rows="5" placeholder="Add the quote here.."></textarea>
+            </div>
+            <hr>
+            <div class="controlform">
+                <input class="btn" type="submit">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

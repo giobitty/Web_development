@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorgia Beavers -Welcome to Flask App</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Giorgia Beavers - Welcome to Flask </h1>
+    <h2>Today's quotes :</h2>
+    <!-- CONDITIONAL STATEMENT TO CHECK IF A QUOTE IS AVAILABLE TO POST using if else statement -->
+    {% if quote1 %}
+        <p>{{quote1}}</p>
+    {% else %}
+        <p>No quotes for today!!</p>
+    {% endif %}
+
+    <h2>List of colors</h2>
+    <!-- Loop statements -->
+    <ul>
+        {% for c in colors %}
+        <li>{{c }}</li>
+        {% endfor %}
+        
+    </ul>
+    <hr>
+    <h2>Add a quote to the quotes</h2>
+    <nav class="addquote">
+    <a href="/quotes.html">Add a quote</a>
+    </nav>
+    <main>
+        <div>
+            <h2>Favorite quotes</h2>
+        </div>
+        {% for r in result%}
+        <div>
+            <h3>Quote Author:</h3>
+            <p>{{r.author}}</p>
+        </div>
+        <div>
+            <h3>Quote:</h3>
+            <p>{{r.quotes}}</p>
+
+        </div>
+        {% endfor %}
+    </main>
+</body>
+</html>
