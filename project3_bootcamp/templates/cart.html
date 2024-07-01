@@ -23,9 +23,9 @@
                             Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#calendula">Calendula Essential Oil</a>
-                            <a class="dropdown-item" href="#lavender">Cornflower Essential Oil</a>
-                            <a class="dropdown-item" href="#peppermint">Oregano Essential Oil</a>
+                            {% for product in products %}
+                                <a class="dropdown-item" href="#{{ product.product_name }}">{{ product.product_name }}</a>
+                            {% endfor %}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/products">All Products</a>
                         </div>
@@ -36,7 +36,7 @@
             </div>
         </nav>
     </header>
-    <section class="hero" id="home">
+    <section class="hero mb-3" id="home">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="../static/img/video/cartvideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -45,9 +45,32 @@
             <h1>Experience the Purity of Nature</h1>
         </div>
     </section>
-
+    <div class="container mt-auto">
+        <h2>Your Shopping Cart</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart %}
+                    <tr>
+                        <td>{{ item.product_name }}</td>
+                        <td>${{ item.product_price }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td><strong>Total:</strong></td>
+                    <td><strong>${{ total }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary">Continue Shopping</a>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="cart.js"></script>    
+     <script src="../static/js/cart.js"></script>
 </body>
 </html>

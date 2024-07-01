@@ -23,9 +23,9 @@
                             Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#calendula">Calendula Essential Oil</a>
-                            <a class="dropdown-item" href="#lavender">Cornflower Essential Oil</a>
-                            <a class="dropdown-item" href="#peppermint">Oregano Essential Oil</a>
+                            {% for product in products %}
+                                <a class="dropdown-item" href="#{{ product.product_name }}">{{ product.product_name }}</a>
+                            {% endfor %}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/products">All Products</a>
                         </div>
@@ -105,6 +105,5 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>    
 </body>
 </html>
