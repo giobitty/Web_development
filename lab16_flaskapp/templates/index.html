@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giorgia Beavers -Welcome to Flask App</title>
     <link rel="stylesheet" href="../static/style.css">
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
     <h1>Giorgia Beavers - Welcome to Flask </h1>
@@ -15,6 +20,8 @@
     {% else %}
         <p>No quotes for today!!</p>
     {% endif %}
+
+    <img src="../static/Screen Shot 2024-07-01 at 7.24.44 PM.png" alt="">
 
     <h2>List of colors</h2>
     <!-- Loop statements -->
@@ -31,6 +38,7 @@
     </nav>
     <main>
         <div>
+            <img src="../static/Screen Shot 2024-07-01 at 7.25.07 PM.png" alt="">
             <h2>Favorite quotes</h2>
         </div>
         {% for r in result%}
