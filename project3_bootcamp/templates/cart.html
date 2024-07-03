@@ -47,27 +47,76 @@
     </section>
     <div class="container mt-auto">
         <h2>Your Shopping Cart</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Product Name</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for item in cart %}
-                    <tr>
-                        <td>{{ item.product_name }}</td>
-                        <td>${{ item.product_price }}</td>
-                    </tr>
-                {% endfor %}
-                <tr>
-                    <td><strong>Total:</strong></td>
-                    <td><strong>${{ total }}</strong></td>
-                </tr>
-            </tbody>
-        </table>
+        <ul>
+            {% for item in cart %}
+                <li>{{ item.product_name }} - ${{ item.product_price }}</li>
+            {% endfor %}
+        </ul>
+        <p>Total: ${{ total }}</p>
         <a href="/" class="btn btn-primary">Continue Shopping</a>
+        <a href="#formcontainer" class="buybtn">Buy</a>
+    </div>
+
+    <div class="container mt-5 ilmioform" id="formcontainer">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="state">State</label>
+                    <select class="form-control" id="state" name="state" required>
+                        <option value="">Choose...</option>
+                        <option>California</option>
+                        <option>New York</option>
+                        <option>Texas</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" name="zip" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method</label>
+                <select class="form-control" id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Choose...</option>
+                    <option>Credit Card</option>
+                    <option>Debit Card</option>
+                    <option>PayPal</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" name="cardNumber" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="expirationDate">Expiration Date</label>
+                    <input type="text" class="form-control" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>

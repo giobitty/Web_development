@@ -4,7 +4,7 @@ from flask_session import Session
 
 
 app = Flask(__name__)
-
+app.secret_key = 'fag1olon1' 
 
 # Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:fag1ol1@localhost/ecommerce'
@@ -46,7 +46,7 @@ class Products(db.Model):
     product_quantity = db.Column(db.Integer)
 
     def __repr__(self):
-        return f'<Product {self.id} - {self.product}>'
+        return f'<Product {self.id} - {self.product_name}>'
 
 with app.app_context():
     db.create_all()
@@ -57,7 +57,8 @@ with app.app_context():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    products = Products.query.all()
+    return render_template('index.html', products=products)
 
 @app.route('/products')
 def show_products():
@@ -70,14 +71,38 @@ def gallery():
 
 @app.route('/cart')
 def show_cart():
+    products = Products.query.all()
     cart = session.get('cart', [])
     total = sum(item['price'] for item in cart)
-    return render_template('cart.html', cart=cart, total=total)
+    return render_template('cart.html', cart=cart, total=total,products=products)
 
 @app.route('/inventory')
 def inventory():
     return render_template('inventory.html')
 
+@app.route('/add_to_cart', methods=['POST'])
+def add_to_cart():
+    
+    products = Products.query.all()
+    # print("testing " , products)
+    total = sum(item['price'] for item in cart)
+    cart = []
+
+    if request.method == 'POST':
+        product_name = request.form.get('productname')
+        product_price = request.form.get('productprice')
+
+        if 'cart' not in session:
+            session['cart'] = []
+
+        cart.append({
+            'productname': product_name,
+            'productprice': product_price
+        })
+
+        return render_template('cart.html', cart=session['cart'], total=total,products=products)
+    else:
+        return 'Invalid Request Method'
 
     
 if __name__ == '__main__':
