@@ -176,6 +176,13 @@ body, html {
     right: 10px;
 }
 
+
+
+/* CART FORM */
+.myform{
+    margin-bottom: 10px;
+}
+/* the form that should pop out after clocking on the buybtn */
 .ilmioform{
     display: none;
 }

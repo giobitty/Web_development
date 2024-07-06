@@ -64,22 +64,60 @@
 
 
 // Function to toggle form container visibility
-function toggleFormContainer() {
-    var formContainer = document.getElementById('formcontainer');
-    if (formContainer.style.display === 'none') {
-        formContainer.style.display = 'block';
-    } else {
-        formContainer.style.display = 'none';
-    }
-}
+// function toggleFormContainer() {
+//     var formContainer = document.getElementById('formcontainer');
+//     if (formContainer.style.display === 'none') {
+//         formContainer.style.display = 'block';
+//     } else {
+//         formContainer.style.display = 'none';
+//     }
+// }
 
-// Event listener to handle button click for "Buy" button
-document.addEventListener('DOMContentLoaded', function() {
-    var buyButton = document.getElementById('buybtn');
-    if (buyButton) {
-        buyButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default action (if any)
-            toggleFormContainer(); // Call toggleFormContainer function
-        });
-    }
-});
+// // Event listener to handle button click for "Buy" button
+// document.addEventListener('DOMContentLoaded', function() {
+//     var buyButton = document.getElementById('buybtn');
+//     if (buyButton) {
+//         buyButton.addEventListener('click', function(event) {
+//             event.preventDefault(); // Prevent default action (if any)
+//             toggleFormContainer(); // Call toggleFormContainer function
+//         });
+//     }
+// });
+// // buybtn form
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Wait for the DOM to fully load
+//     var buyButton = document.getElementById('buybtn');
+//     var formContainer = document.getElementById('formcontainer');
+
+//     if (buyButton) {
+//         buyButton.addEventListener('click', function(event) {
+//             event.preventDefault();  // Prevent the default form submission behavior (if any)
+//             formContainer.style.display = 'block';  // Show the form container
+//         });
+//     }
+// });
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Add event listener to the empty cart button
+//     document.getElementById('emptyCartBtn').addEventListener('click', function() {
+//         // Perform AJAX request or form submission to empty the cart
+//         fetch('/emptyCart', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({ action: 'emptyCart' }), // Include any data needed for your server
+//         })
+//         .then(response => {
+//             if (response.ok) {
+//                 // Optionally handle success, such as updating UI or showing a message
+//                 console.log('Cart emptied successfully');
+//                 // Optionally clear input fields or perform other UI updates
+//             } else {
+//                 console.error('Failed to empty cart');
+//             }
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//         });
+//     });
+// });

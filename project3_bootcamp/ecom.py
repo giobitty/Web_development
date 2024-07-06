@@ -67,17 +67,28 @@ def show_products():
 def gallery():
     return render_template('gallery.html')
 
-@app.route('/cart')
+@app.route('/cart', methods=['GET','POST'])
 def show_cart():
-    products = Products.query.all()
+    if request.method == 'POST':
+        if 'emptyCartBtn' in request.form:
+            session.pop('cart', None)  # Clear the cart stored in session
+            session.clear()
+            return redirect(url_for('show_cart'))  # Redirect back to cart page after emptying
+        # Handle other form submissions or actions here
+
+    # Retrieve cart and total
     cart = session.get('cart', [])
     total = sum(item['productprice'] if item.get('productprice') is not None else 0 for item in cart)
+    products = []  # Ensure to populate products as needed
     return render_template('cart.html', cart=cart, total=total, products=products)
-
 
 @app.route('/inventory')
 def inventory():
     return render_template('inventory.html')
+
+@app.route('/contactus')
+def contact():
+    return render_template('contactus.html')
 
 @app.route('/add_to_cart', methods=['POST'])
 def add_to_cart():
@@ -107,6 +118,51 @@ def add_to_cart():
         return redirect(url_for('show_cart'))
     else:
         return 'Invalid Request Method'
-    
+
+# emptycart NOT WORKINGS
+# @app.route('/emptyCart', methods=['POST'])
+# def emptyCart():
+#     if 'cart' in session:
+#         product_name = request.form['productname']
+#         product_price = float(request.form['productprice'])
+        
+#         # Find and remove the item from the cart based on product name and price
+#         for item in session['cart']:
+#             session['cart'].remove({
+#             'productname': product_name,
+#             'productprice': product_price
+#             })
+                
+#             session.modified = True
+#             break  # Exit loop once item is found and removed
+
+#     return redirect(url_for('show_cart'))
+
+@app.route('/delete_from_cart', methods=['POST'])
+def delete_from_cart():
+    if 'cart' in session:
+        product_name = request.form['productname']
+        product_price = float(request.form['productprice'])
+        
+        # Find and remove the item from the cart based on product name and price
+        for item in session['cart']:
+            session['cart'].remove(item)
+            session.modified = True
+
+    return redirect(url_for('show_cart'))
+
+# handle form request 
+@app.route('/handle_cart_actions', methods=['POST'])
+def handle_cart_actions():
+    action = request.form.get('action')
+
+    if action == 'emptyCart':
+       return session.pop('cart', None)  # Clear the cart session
+    elif action == 'buy':
+        return redirect(url_for('payment_page'))  # Replace 'payment_page' with your actual route
+
+    return redirect(url_for('cart'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)

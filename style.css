@@ -57,3 +57,24 @@ background-color: rgb(244, 242, 236);
 a{
     color: rgb(254, 249, 243);
 }
+/* project 2 p */
+.pj2{
+    display: flex;
+    flex-direction: column;
+
+}
+.pj2 a{
+    background-color: rgb(233, 158, 158); padding: 10px; margin: 10px;
+}
+.pj2 a:hover{
+    background-color: black;
+    color: bisque;
+}
+.project2exp{
+    text-align: center;
+    margin: auto;
+    background-color: antiquewhite;
+    color: rgb(181, 137, 79);
+    padding: 20px;
+    width: 30%;
+}
