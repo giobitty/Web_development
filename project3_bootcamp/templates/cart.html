@@ -31,7 +31,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" class="cartref">&#x1F6D2;</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" class="cartref">&#x1F6D2; Cart</a></li>
                 </ul>
             </div>
         </nav>
@@ -49,14 +49,15 @@
         <h2>Your Shopping Cart</h2>
         <ul>
             {% for item in cart %}
-                <li>{{ item.product_name }} - ${{ item.product_price }}</li>
+                <li>{{ item['productname'] }} - ${{ item['productprice'] }}</li>
             {% endfor %}
         </ul>
         <p>Total: ${{ total }}</p>
         <a href="/" class="btn btn-primary">Continue Shopping</a>
-        <a href="#formcontainer" class="buybtn">Buy</a>
+        <a href="#formcontainer" class="buybtn" id="buybtn">Buy</a>
     </div>
 
+    <!-- this should pop up when the user presses the Buy button -->
     <div class="container mt-5 ilmioform" id="formcontainer">
         <form action="" method="post">
             <div class="form-group">

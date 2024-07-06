@@ -67,9 +67,12 @@
                         <div class="card-header mt-2">
                         </div>
                         <div class="card-body">
-                            <img src="../static/img/products/pexels-mareefe-672048.jpg" alt="" class="card-img img-fluid">
+                            <img src="../static/img/products/{{product.product_img}}" alt="" class="card-img img-fluid">
                             <form action="/add_to_cart" method="post">
-                                <h3 class="productname" name="productname">{{product.product_name}}</h3>
+                                <h3>{{product.product_name}}</h3>
+                                <!-- since we are in a form, the collection comes from the INPUT so we need a hidden input with the value of what we are passing !! Thank you Adeeb!! -->
+                                <input type="text" class="productname" name="productname"  value="{{product.product_name}}" hidden>
+                                <input type="text" class="productprice" name="productprice" value="{{ product.product_price }}" hidden>
 
                             <p>{{product.product_description}} <span class="productprice"><b>$ {{product.product_price}}</b></span></p>
                             <span>&#x1F6D2;</span>

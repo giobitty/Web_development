@@ -11,7 +11,7 @@
     <!-- The header of the page includes the menu, this should pop out from under the picture on scrolling and will have a fit position on the top of the -->
     <header class="header">
         <nav class="menu navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Essential Oils</a>
+            <a class="navbar-brand" href="gallery.html">Gallery</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,7 +58,7 @@
 
     <section class="content">
         <!-- here I will have the cards of products side scrolling => carousel style-->
-        <div class="container mt-4">
+        <div class="container mt-4" id="shop">
             <div class="row g-4">
                 <!-- card1 -->
                 <div class="col-md-4">
@@ -81,7 +81,7 @@
                 </div>
                 <!-- card2 -->
                 <div class="col-md-4">
-                    <div class="card border-0 p-4">
+                    <div class="card border-0 p-4 item">
                         <div class="card-header">
                             <h3 class="productname">Cornflower Essential Oil</h3>
                             <p>Calming and soothing</p>
@@ -99,7 +99,7 @@
                 </div>
                 <!-- card3 -->
                 <div class="col-md-4">
-                    <div class="card border-0 p-4">
+                    <div class="card border-0 p-4 item">
                         <div class="card-header">
                             <h3 class="productname">Kiwi Essential Oil</h3>
                             <p>Skin health</p>
@@ -117,7 +117,7 @@
                 </div>    
                 <!-- card4 -->
                 <div class="col-md-4">
-                    <div class="card border-0 p-4">
+                    <div class="card border-0 p-4 item">
                         <div class="card-header">
                             <h3 class="productname">Oregano Essential Oil</h3>
                             <p>Calming and soothing</p>
@@ -135,7 +135,7 @@
                 </div>
                 <!-- card5 -->
                 <div class="col-md-4 ">
-                    <div class="card border-0 p-4">
+                    <div class="card border-0 p-4 item">
 
                         <div class="card-header">
                             <h3>Calendula Essential Oil</h3>
@@ -149,6 +149,24 @@
                             <input type="number" class="itmqnt" name="quantity" id="quantity" min="1" max="10">
                             <input class="cartbtn" type="submit" value="Add to cart">
                         </div>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="col-md-4">
+                    <div class="card border-0 p-4 item">
+                        <div class="card-header">
+                            <h3 class="productname">Rosmary Essential Oil</h3>
+                            <p>Calming and soothing</p>
+                        </div>
+                        <div class="card-body">
+                        <img src="img/products/pexels-mareefe-672069.jpg" alt="" class="card-img img-fluid">
+                        <p>Rosmary Essential oil is  a natural, aromatic oil that comes from the leaves and flowering tops of the rosemary plant, Rosmarinus officinalis. Rosemary oil contains compounds with anti-inflammatory, antioxidant, and antimicrobial properties. <span class="productprice"><b>$59.99</b></span></p>
+                        <span>&#x1F6D2;</span>
+                        <label for="quantity">Qt</label>
+                        <input type="number" class="itmqnt" name="quantity" id="quantity" min="1" max="10">
+                        <input class="cartbtn" type="submit" value="Add to cart">
+                        </div>
+                        
                     </div>
                 </div>
                
@@ -203,8 +221,8 @@
         </div>
     </footer>
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="cart.js"></script>
     
 </body>

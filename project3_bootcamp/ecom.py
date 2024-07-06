@@ -24,7 +24,7 @@ def add_product():
         product_quantity = request.form['productquantity']
 
         new_product = Products(product_name=product_name,
-                              product_img=product_img,
+                              product_img=str(product_img),
                               product_description=product_description,
                               product_price=product_price,
                               product_quantity=product_quantity)
@@ -51,8 +51,6 @@ class Products(db.Model):
 with app.app_context():
     db.create_all()
 
-
-
 # Routes and view functions
 
 @app.route('/')
@@ -73,8 +71,9 @@ def gallery():
 def show_cart():
     products = Products.query.all()
     cart = session.get('cart', [])
-    total = sum(item['price'] for item in cart)
-    return render_template('cart.html', cart=cart, total=total,products=products)
+    total = sum(item['productprice'] if item.get('productprice') is not None else 0 for item in cart)
+    return render_template('cart.html', cart=cart, total=total, products=products)
+
 
 @app.route('/inventory')
 def inventory():
@@ -82,28 +81,32 @@ def inventory():
 
 @app.route('/add_to_cart', methods=['POST'])
 def add_to_cart():
-    
     products = Products.query.all()
-    # print("testing " , products)
-    total = sum(item['price'] for item in cart)
-    cart = []
 
     if request.method == 'POST':
         product_name = request.form.get('productname')
-        product_price = request.form.get('productprice')
-
+        product_price_str = request.form.get('productprice')
+        
+        if product_price_str and product_price_str.replace('.', '', 1).isdigit():
+            product_price = float(product_price_str)
+        else:
+            # Handle the case where product_price_str is not valid
+            return 'Invalid product price'
+        # Initialize cart in session if it's not already there
         if 'cart' not in session:
             session['cart'] = []
 
-        cart.append({
+        # Append the selected product to cart
+        session['cart'].append({
             'productname': product_name,
             'productprice': product_price
         })
+        session.modified = True
+        total = sum(item['productprice'] for item in session['cart'] if item.get('productprice') is not None)
 
-        return render_template('cart.html', cart=session['cart'], total=total,products=products)
+        return redirect(url_for('show_cart'))
     else:
         return 'Invalid Request Method'
-
     
 if __name__ == '__main__':
     app.run(debug=True)
