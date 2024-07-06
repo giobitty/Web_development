@@ -68,9 +68,10 @@ justify-content: space-around;
 }
 .sidecontainer img{
     margin: 20px;
-padding: 20px;    
-border-radius: 8px;
-overflow: hidden;}
+    padding: 20px;    
+    border-radius: 8px;
+    overflow: hidden;
+}
 article{
     text-align: center;
 }
@@ -80,6 +81,7 @@ article{
     padding: 30px;
 }
 
+/* CARDS */
 .card{
     margin: 20px;
     transition: 300ms;
@@ -93,7 +95,11 @@ article{
     /* remember, to have the size changing effect use "transform" */
     transform: scale(1.2);
 }
+.card img{
+    padding: 15px;
+}
 
+/* contacts */
 .contact{
     background-color: rgb(27, 32, 27);
     display: flex;
@@ -146,6 +152,7 @@ footer{
 .containerWhattodo img:hover{
     transform: scale(1.2);
 }
+/* Where to stay page */
 .wheretostayimg{
     padding: 10px;
     width: 320px;
@@ -156,6 +163,13 @@ footer{
 .bedbreak{
     display: flex;
     flex-direction: column;
+}
+.hotel{
+    padding: 40px;
+    margin: auto;
+}
+.hotel h1:hover{
+    color: gold;
 }
 .hotel p{
     text-align: center;

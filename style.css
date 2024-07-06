@@ -64,7 +64,10 @@ a{
 
 }
 .pj2 a{
-    background-color: rgb(233, 158, 158); padding: 10px; margin: 10px;
+    width: 40%;
+    background-color: rgb(233, 158, 158); 
+    padding: 10px; 
+    margin: 10px auto;
 }
 .pj2 a:hover{
     background-color: black;
