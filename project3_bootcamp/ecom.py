@@ -51,6 +51,18 @@ class Products(db.Model):
 with app.app_context():
     db.create_all()
 
+# class for the Order
+class Order(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    buyer_name = db.Column(db.String(100), nullable=False)
+    buyer_email = db.Column(db.String(100), nullable=False)
+    total_price = db.Column(db.Float, nullable=False)
+
+    def __repr__(self):
+        return f'<Order {self.id}>'
+with app.app_context():
+    db.create_all()
+
 # Routes and view functions
 
 @app.route('/')
@@ -163,6 +175,23 @@ def handle_cart_actions():
 
     return redirect(url_for('cart'))
 
+# root to the checkout
+@app.route('/submit_order', methods=['POST'])
+def submit_order():
+    if request.method == 'POST':
+        buyer_email = request.form['buyer_email']
+        total_price = float(request.form['total_price'])  # Adjust as needed based on your form structure
+
+        # Create a new order object and add it to the database
+        new_order = Order(buyer_name=buyer_name, buyer_email=buyer_email, total_price=total_price)
+        db.session.add(new_order)
+        db.session.commit()
+
+        return redirect(url_for('order_confirmation'))
+
+@app.route('/order_confirmation')
+def order_confirmation():
+    return render_template('order_confirmation.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
